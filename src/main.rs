@@ -32,6 +32,7 @@ async fn main() {
             let tx_hash = format!("{:x}", i);
             let amount = 3;
             let res = bad_transfer(tx, &tx_hash, &from, &to, amount).await;
+            // let res = good_transfer(tx, &tx_hash, &from, &to, amount).await;
             match res {
                 Ok(_) => {},
                 Err(e) => {
